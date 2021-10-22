@@ -38,6 +38,12 @@ public class MainApp {
 
 				System.out.println("Digite el precio del producto:");
 				producto.setPrecio(scanner.nextDouble());
+				System.out.println("Digite la categoria del producto:");
+				producto.setPrecio(scanner.nextLine());
+				System.out.println("Digite el detalle para describir el producto:");
+				producto.setPrecio(scanner.nextLine());
+				System.out.println("Digite la marca del producto:");
+				producto.setPrecio(scanner.nextLine());
 				System.out.println(producto);
 				entity.getTransaction().begin();
 				entity.persist(producto);
@@ -79,6 +85,15 @@ public class MainApp {
 					producto.setNombre(scanner.nextLine());
 					System.out.println("Digite el precio del producto:");
 					producto.setPrecio(scanner.nextDouble());
+					System.out.println("Digite la categoria del producto:");
+					scanner.nextLine();
+					producto.setCategoria(scanner.nextLine());
+					System.out.println("Digite un nuevo detalle del producto:");
+					scanner.nextLine();
+					producto.setDetalle(scanner.nextLine());
+					System.out.println("Digite la marca del producto:");
+					scanner.nextLine();
+					producto.setMarca(scanner.nextLine());
 					entity.getTransaction().begin();
 					entity.merge(producto);
 					entity.getTransaction().commit();

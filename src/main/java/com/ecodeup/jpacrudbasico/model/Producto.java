@@ -17,6 +17,13 @@ public class Producto {
 	private String nombre;
 	@Column
 	private double precio;
+	@Column
+	private String categoria;
+	@Column
+	private String detalle;
+	@Column
+	private String marca;
+
 	
 	
 	public Long getId() {
@@ -37,9 +44,27 @@ public class Producto {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
+	public String getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+	public String getDetalle() {
+		return detalle;
+	}
+	public void setDetalle(String detalle) {
+		this.detalle = detalle;
+	}
+	public String getMarca() {
+		return marca;
+	}
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
 	@Override
 	public String toString() {
-		return "Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + "]";
+		return "Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", categoria=" + categoria + ", detalle=" + detalle + ", marca=" + marca +"]";
 	}
 	
 }
